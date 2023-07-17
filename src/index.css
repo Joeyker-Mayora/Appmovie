@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#ofi{
+    z-index: 2;
+  position: relative;
+  
+  
+
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #161515;
+    
+   
+}
+#capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 500px) {
+    body {
+        background-color: rgb(43, 42, 42);
+
+    }
+    video {
+        display: none;
+    }
+
+}
+label {
+    @apply font-bold text-gray-400
+}
+input {
+    @apply w-full ml-10 max-w-[300px] bg-white/25 font-bold mt-2 py-2 rounded-md outline-none px-2 }
+.x {
+    @apply flex
+}
+.icons {
+    @apply  text-red-600 text-3xl ml-2 py-3
+}
+.ing {
+    @apply text-white font-bold border-b border-red-600 hover:text-red-600 ml-10 mt-2 hover:scale-110 ease-in duration-300
+}
+.reg {
+    @apply text-white font-bold border-b border-red-600 hover:text-red-600  mt-7 hover:scale-110 ease-in duration-300
+}
+.card {
+    @apply bg-red-600 rounded-lg px-[100px] py-[50px]  mt-4
+}
+.submit {
+  @apply  bg-black/70 py-4 rounded-lg
 }
